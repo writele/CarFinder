@@ -71,5 +71,29 @@ namespace CarFinder.Models
                 new SqlParameter("trim", trim))
               .ToListAsync();
         }
+
+        public async Task<List<Cars>> GetCarsByYearMakeModel(string year, string make, string model)
+        {
+            return await this.Database.SqlQuery<Cars>("CarByYearMakeModel @Year, @Make, @Model",
+                new SqlParameter("year", year),
+                new SqlParameter("make", make),
+                new SqlParameter("model", model))
+              .ToListAsync();
+        }
+
+        public async Task<List<Cars>> GetCarsByYearMake(string year, string make)
+        {
+            return await this.Database.SqlQuery<Cars>("CarByYearMake @Year, @Make",
+                new SqlParameter("year", year),
+                new SqlParameter("make", make))
+              .ToListAsync();
+        }
+
+        public async Task<List<Cars>> GetCarsByYear(string year)
+        {
+            return await this.Database.SqlQuery<Cars>("CarByYear @Year", 
+               new SqlParameter("year", year))
+              .ToListAsync();
+        }
     }
 }
