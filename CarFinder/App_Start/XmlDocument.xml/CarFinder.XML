@@ -481,6 +481,12 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:CarFinder.Controllers.CarController.GetYears">
+            <summary>
+            Get list of all years in car database.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:CarFinder.Controllers.CarController.GetMakes(System.String)">
             <summary>
             Get all car makes according to a specified year.
@@ -488,6 +494,57 @@
             <param name="year"></param>
             <returns></returns>
             
+        </member>
+        <member name="M:CarFinder.Controllers.CarController.GetModels(System.String,System.String)">
+            <summary>
+            Get all models for a specified year and car make.
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CarFinder.Controllers.CarController.GetTrims(System.String,System.String,System.String)">
+            <summary>
+            Get all trims for a specified car according to year, make, and model.
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CarFinder.Controllers.CarController.GetCarByYearMakeModelTrim(System.String,System.String,System.String,System.String)">
+            <summary>
+            Get all details on specified car according to year, make, model, and trim.
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <param name="model"></param>
+            <param name="trim"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CarFinder.Controllers.CarController.GetCarsByYearMakeModel(System.String,System.String,System.String)">
+            <summary>
+            Get all cars according to specified year, make, and model.
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CarFinder.Controllers.CarController.GetCarsByYearMake(System.String,System.String)">
+            <summary>
+            Get all cars according to specified year and make.
+            </summary>
+            <param name="year"></param>
+            <param name="make"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CarFinder.Controllers.CarController.GetCarsByYear(System.String)">
+            <summary>
+            Get all cars for a given year.
+            </summary>
+            <param name="year"></param>
+            <returns></returns>
         </member>
         <member name="M:Bing.BingSearchContainer.Composite(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Double},System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>

@@ -51,3 +51,4 @@ packages
 obj
 KeepSaving/Web.config
 angular*
+CarFinder/private.config
