@@ -7,9 +7,11 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace CarFinder.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/Car")]
     public class CarController : ApiController
     {
@@ -113,6 +115,14 @@ namespace CarFinder.Controllers
 
         ///////////// RETURNING DATA TO VIEW ///////////////
         // api/Car/getCar?year=2014&make=Kia&Model=Soul&Trim=4dr%20Wagon%20(1.6L%204cyl%206A)
+        /// <summary>
+        /// Get all car details, image, and recall info for given year, make, model, and trim.
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="make"></param>
+        /// <param name="model"></param>
+        /// <param name="trim"></param>
+        /// <returns></returns>
         [Route("getCar")]
         public async Task<IHttpActionResult> getCarData(string year = "", string make = "", string model = "", string trim = "")
         {
